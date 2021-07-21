@@ -15,7 +15,7 @@ Datasets we intend to utilize include:
 -	Labor force from 2012-present (Monroe County level, monthly timescale)
 -	Coral disease: prevalence percentages and boundary from 2017 - 2019 (FRT-wide, daily) 
 -	Reef benthic composition from 2012-present (FRT-wide, yearly) 
--	Major storms from 2012-present (FRT-wide, event date) 
+-	Major storm events from 2012-present (FRT-wide, event date) 
 -	Water temperature from 2012-present (FRT-wide, daily)
 -	Degree heating weeks from 2012-present (FRT-wide, weekly)
 -	Commercial fisheries landings from 2012-present (Monroe Couty, annual) 
