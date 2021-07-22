@@ -45,10 +45,12 @@ ggplot(CREMP_Raw,
   aes(x = Sample.Year, y = Species.Richness, color=subRegionId)) +
   geom_point(stat = 'summary',fun = mean)+
   geom_line(stat = 'summary',fun = mean)
-  #geom_smooth(method = 'lm')
 
 
-
+ggplot(CREMP_Raw,
+  aes(x = Sample.Year, y = Species.Richness, color=subRegionId)) +
+  geom_point(stat = 'summary',fun = mean)+
+  geom_smooth(method = 'lm')
 
 #Plot percent coral cover (Y) over year (x)
 library(ggplot2)
@@ -57,22 +59,16 @@ ggplot(CREMP_Raw,
   geom_point(stat = 'summary',fun = median)+
   geom_smooth(method = 'lm')
 
-
-
-
-
-# calculate the mean species richness observed each year
-SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$Species.Richness
-SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$sitename
-
 # add vertical line to indicate hurricane or other event: geom_vline(xintercept = 5)
 
-# plot only the median species richness
- 
 
-ggplot(CREMP_Raw,
-  aes(x = Sample.Year, y = Stony.coral, color = )) +
-  geom_point()
+
+
+## calculate the mean species richness observed each year
+#SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$Species.Richness
+SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$Species.Richness#$sitename
+
+mean(CREMP_Raw[CREMP_Raw$Sample.Year==2012 & CREMP_Raw$sitename=="Content Keys             ",]$Species.Richness)
 
 
 # plot reef locations as spatial feature 
@@ -92,3 +88,19 @@ mapview(reef_location)
 mapview(reef_location['Species.Richness'])
 
 # pull out just the data for each year 
+
+
+install.packages("ggspatial")
+library("ggspatial")
+ggplot(reef_location['Species.Richness'], aes(color=Species.Richness)) +
+    labs(title = "Florida Reef Tract Stony Coral Species Richness")+
+    annotation_map_tile(type='cartolight')+
+    geom_sf() 
+
+
+  #guides(fill=guide_legend(title="Species Richness "))
+  
+  
+  #geom_point(stat = 'summary',fun = median)+
+  
+  +
