@@ -44,7 +44,8 @@ library(ggplot2)
 ggplot(CREMP_Raw,
   aes(x = Sample.Year, y = Species.Richness, color=subRegionId)) +
   geom_point(stat = 'summary',fun = mean)+
-  geom_smooth(method = 'lm')
+  geom_line(stat = 'summary',fun = mean)
+  #geom_smooth(method = 'lm')
 
 
 
