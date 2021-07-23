@@ -49,6 +49,7 @@ library(gifski)
 library(sf)
 library(viridis)
 
+## plot species richness timeseries by sub-region
 subregion_animation <- ggplot(CREMP_Raw,
   aes(x = Sample.Year, y = Species.Richness, color=subRegionId)) +
   theme(legend.position = 'top', plot.title = element_text(hjust = 0.5))+
@@ -58,7 +59,7 @@ subregion_animation <- ggplot(CREMP_Raw,
   labs(title = 'Florida Reef Tract Stony Coral Species Richness', 
        x = 'Species Richness', y = 'Year')
 
-# save as GIF 
+# animate as GIF 
 animate(subregion_animation)
 
 
@@ -66,17 +67,9 @@ animate(subregion_animation)
 ggplot(CREMP_Raw,
   aes(x = Sample.Year, y = Species.Richness, color=subRegionId)) +
   geom_point(stat = 'summary',fun = mean)+
-  geom_smooth(method = 'lm')
+  geom_smooth(method = 'lm')+
+  geom_vline(xintercept = 2017.75)# vertical line to indicate hurricane Irma 
 
-# add vertical line to indicate hurricane or other event: geom_vline(xintercept = 5)
-
-
-## calculate the mean species richness observed each year
-#SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$Species.Richness
-SY_2012 <- CREMP_Raw[CREMP_Raw$Sample.Year == 2012,]$Species.Richness#$sitename
-
-mean(CREMP_Raw[CREMP_Raw$Sample.Year==2012 & CREMP_Raw$sitename=="Content Keys             ",]$Species.Richness)
-str(CREMP_Raw)
 
 # plot reef locations as spatial feature 
 dev.off()
@@ -86,21 +79,19 @@ reef_location <- st_as_sf(CREMP_Raw,
 plot(reef_location['Stony.coral'])   
 plot(reef_location['Species.Richness'])   
 
-# Plot all reefs with all data available 
 install.packages("transformr")
 library(transformr)
 mapview(reef_location)
 mapview(reef_location['Species.Richness'])
 
-# pull out just the data for each year 
-
+## find average species richness at each site for each sample year
 reef_location_avg <- reef_location %>%
   group_by(sitename,Sample.Year)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
+  summarise(Species.Richness_avg = mean(Species.Richness))
 
-######MARY'S CODE ###############
+## Moving points animation plot
 library("ggspatial")
-richness.animation <- ggplot(reef_location_avg, aes(color=Species.Richness)) +
+richness.animation <- ggplot(reef_location_avg, aes(color=Species.Richness_avg)) +
   labs(title = "Florida Reef Tract Stony Coral Species Richness")+
   #annotation_map_tile(type='cartolight')+ takes a long time to load with the annotation map
   geom_sf()+ 
@@ -108,19 +99,16 @@ richness.animation <- ggplot(reef_location_avg, aes(color=Species.Richness)) +
 
 anim_save('richness_animation.gif', animation=richness.animation)
 
-ggplot(reef_location%>%filter(Sample.Year=='2017'), aes(color=Species.Richness)) +
-  labs(title = "Florida Reef Tract Stony Coral Species Richness")+
-  annotation_map_tile(type='cartolight')+
-  geom_sf() +
-  scale_color_viridis_c()
-
-## Make a graph for each year
+## GIF of species richness by year
+# find unique year occurrences 
 reef.years <- unique(reef_location$Sample.Year)
 
 # specify where to save files: 
 dir.out <- 'C:/Users/platz/OneDrive - University of South Florida/Research/SESYNC/Scripts/' # where files will save
+
+# Create a species richness plot for each year and save to same location 
 for(i in reef.years){
-  p<- ggplot(reef_location_avg%>%filter(Sample.Year==i), aes(color=Species.Richness_Avg)) +
+  p<- ggplot(reef_location_avg%>%filter(Sample.Year==i), aes(color=Species.Richness_avg)) +
     labs(title = "Florida Reef Tract Stony Coral Species Richness")+
     annotation_map_tile(type='cartolight')+
     geom_sf() +
@@ -154,100 +142,11 @@ image_write(image = img_animated,
 
 
 
-
-
-
-
-
-
-
-library("ggspatial")
-ggplot(reef_location['Species.Richness'], aes(color=Species.Richness)) +
-    labs(title = "Florida Reef Tract Stony Coral Species Richness")+
-    annotation_map_tile(type='cartolight')+
-    geom_sf()+ 
-    transition_time(Sample.Year) + labs(title = "Year: {frame_time}")
-
-
-
-
-
-
-#plot
-ggplot(reef_location_Avg['Species.Richness_Avg'], aes(color=Species.Richness_Avg)) +
-  labs(title = "Florida Reef Tract Stony Coral Species Richness")+
-  annotation_map_tile(type='cartolight')+
-  geom_sf()
-
-
-########################### Help With this section ######################################
-# create new spatial features for the average species richness by reef site for each year
-reef_location_avg <- reef_location %>%
-  group_by(sitename,Sample.Year)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-names(reef_location_avg)[2] <- "Year"
-colnames(reef_location_avg)#view column names
-reef_location_avg$Year <- as.numeric(reef_location_avg$Year)
-
-ggplot(reef_location, aes(color=Species.Richness)) +
-  labs(title = 'Florida Reef Tract Stony Coral Species Richness')+
-  annotation_map_tile(type='cartolight')+
-  geom_sf()+
-  transition_time(Year) + labs(title = 'Year: {frame_time}')
-
-
-#scale_fill_viridis_d() +
-#scale_size(range = c(0, 20))
-
-
-
-
-
-
-
-
 # create new spatial features for the average species richness by reef site for each year
 reef_location_2013 <- reef_location[reef_location$Sample.Year == 2013,] %>%
   group_by(sitename)%>%
   summarise(Species.Richness_Avg = mean(Species.Richness))
             
-reef_location_2014 <- reef_location[reef_location$Sample.Year == 2014,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2015 <- reef_location[reef_location$Sample.Year == 2015,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2016 <- reef_location[reef_location$Sample.Year == 2016,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2017 <- reef_location[reef_location$Sample.Year == 2017,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2018 <- reef_location[reef_location$Sample.Year == 2018,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2019 <- reef_location[reef_location$Sample.Year == 2019,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-reef_location_2020 <- reef_location[reef_location$Sample.Year == 2020,] %>%
-  group_by(sitename)%>%
-  summarise(Species.Richness_Avg = mean(Species.Richness))
-
-
-#plot 
-ggplot(reef_location_2020['Species.Richness_Avg'], aes(color=Species.Richness_Avg)) +
-  labs(title = "2020 Florida Reef Tract Stony Coral Species Richness")+
-  annotation_map_tile(type='cartolight')+
-  geom_sf()
-
-
 
   
 
