@@ -1,8 +1,7 @@
 #Working with DEM data
+#Must install packages ggplot2, stars, dplyr, sf, data.table, mapview
 
 #DEM
-
-install.packages("ggplot2")
 
 library(ggplot2)
 
@@ -15,6 +14,7 @@ st_crs
 bath_bbox <- st_bbox(bath)
 bath_bbox
 
+library(dplyr)
 ggplot() +
   geom_stars(data = bath)
 
@@ -27,24 +27,23 @@ rdata <- fread('Station_List_Master_200712.csv')
 reefs <- st_as_sf(rdata, coords = c("lonDD", "latDD"), 
                   crs = st_crs(bath)
                   )
+
 #Plot of combined bathymetry + reef locations 
   
 ggplot() +
   geom_stars(data = bath) +
   geom_sf(data = reefs, size = 0.5, color = 'red')
 
+
 #Mapview of combined bathymetry + reef locations
+#Reef locations color varies by offshore depth
 
 library(mapview)
 mapview(bath)
 
 mapview(bath, legend = FALSE, alpha = 0.3, 
-        maxpixels = 4891525, map.types = 'Esri.WorldImagery' ) +
-  mapview(reefs, legend = FALSE)
+        maxpixels = 4891525) +
+  mapview(reefs, legend = TRUE, zcol = "OffshoreDepth_ft")
 
 
-#Storage
-#../Coral Tipping Points/SESYNC_Project_Files/
-#../Coral Tipping Points/SESYNC_Project_Files/
-
-
+#Optional mapview add: map.types = 'Esri.WorldImagery' 
