@@ -1,6 +1,8 @@
 ---
 title: "Coral Tipping Points SESYNC Presentation"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -21,9 +23,9 @@ Urban coastal areas face powerful push-pull factors for investment into critical
 
 By linking discourse, socioeconomic, and biophysical datasets, this project explores connections between socio-ecological components of the Florida Reef Tract system to identify economic and social impacts surrounding the recent Stony Coral Tissue Loss Disease (SCTLD) event. Since 2014, SCTLD has been ravaging the Florida Reef Tract and spreading throughout the Western Atlantic. Since first appearing near the Port of Miami in 2014, the disease has spread the entire length of the Florida Reef Tract as well as throughout the Western Atlantic to the reefs of 17 countries and territories. SCTLD affects nearly half of the 45 reef building stony coral species and results in complete colony mortality just days to weeks following infection. Recent studies in the Florida Reef Tract approximate that average coral cover has fallen from a historical level of 25-40% to just 2% coral cover presently as a results of these disease and anthropogenic impacts. 
 
-(insery image of SCTLD infected coral??)
+(insert image of SCTLD infected coral??)
 
-##Research Objective 
+## Research Objective 
 
 We seek to advance the understanding of socio-ecological tipping points in a complex system, as information about coral decline flows from the coral reef itself, to (human) individuals who perceive the decline, and then to the broader (human) community and potential visitors through communication channels (discourse), ultimately causing behavioral changes that impact local and regional economies. That is, the stressor of coral decline impacts the ecosystem, and that stress then reverberates through the socio-economic system. Through this investigation, we hope to identify correlations and understand tipping point dynamics to answer research questions such as: what is the lag time between an environmental catastrophe and the social response? This project seeks to build a systematic understanding of linkages between the biological, hydrologic, economic, and socio-cultural components of the socio-ecological system to understand how dynamics in specific components affect the system’s ability to recover from past disturbances.
 
@@ -57,22 +59,3 @@ In regard to the social component, there are several databases available that of
 - Twitter discourse 
 - TripAdvisor reviews 
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
