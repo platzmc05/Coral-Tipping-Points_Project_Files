@@ -20,7 +20,11 @@ cremp_temps <- cremp_temps %>%
 
 temp_time <- ggplot(cremp_temps, 
                    aes(x=date, y=TempF)) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method='lm', aes(color=Subregion, fill=Subregion)) +
+  labs(title = "Water Temperature at Reef Locations Over Time") +
+  theme(plot.title = element_text(
+    hjust = 0.5))
 temp_time
 
 #DHW analysis
