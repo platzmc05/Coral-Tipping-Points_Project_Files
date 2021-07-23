@@ -61,6 +61,10 @@ In terms of the economic component, there are extensive datasets including count
 
 ![Monthly Gross Sales of Hotels/Motels/Accommodations](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/hotel_sales.png)
 ![Monthly Gross Sales of Admissions and Recreation Services](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/rec_sales.png)
+![Monthly Unemployment Rate](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/unemployment.png)
+![Monthly Civilian Labor Force](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/laborforce.png)
+![Unemployment as a function of Gross Sales of Accommodations](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/unemp_hotels.png)
+![Unemployment as a function of Gross Sales of Admissions and Recreation Services](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/unemp_rec.png)
 
 ## Social Discourse Data: 
 
