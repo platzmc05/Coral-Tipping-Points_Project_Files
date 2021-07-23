@@ -59,6 +59,9 @@ In terms of the economic component, there are extensive datasets including count
 - Monroe County unemployment  
 - Monroe County labor force  
 
+![Monthly Gross Sales of Hotels/Motels/Accommodations](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/hotel_sales.png)
+![Monthly Gross Sales of Admissions and Recreation Services](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/rec_sales.png)
+
 ## Social Discourse Data: 
 
 In regard to the social component, there are several databases available that offer quantitative and qualitative insights. For instance, while databases such as STR for hotel data or annual tourism reports can offer quantitative insights of the changes in tourism, the social media databases complement with qualitative insights on the depth of those changes, capturing a wider range of perceptions including both locals and tourists. Here we explore: 
