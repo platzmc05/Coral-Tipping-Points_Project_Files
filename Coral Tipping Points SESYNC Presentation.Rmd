@@ -45,6 +45,11 @@ For the ecological component, including the physical environment as well as stat
 - Reef fish density and diversity  
 
 ![Stony Coral Species Richness Declines in the Florida Reef Tract](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/Stony_Coral_Species_Richness.gif)
+Increasing sea temperatures are known to cause coral stress and make them more susceptible to threats such as disease. Degree heating weeks (DHW) are a measure of how much heat stress has accumulated in a region over a period of 3 months, and are a metric that is used to predict mass bleaching events. A plot of average monthly regional sea surface temperature (SST) and degree heating weeks shows that SST is rising over the period 2012 - 2020 and the frequency of DHW has increased.
+
+![Regional Sea Surface Temperature and Degree Heating Weeks](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/DHW.PNG)
+
+
 
 ## Economic Data:
 
@@ -58,6 +63,9 @@ In terms of the economic component, there are extensive datasets including count
 
 In regard to the social component, there are several databases available that offer quantitative and qualitative insights. For instance, while databases such as STR for hotel data or annual tourism reports can offer quantitative insights of the changes in tourism, the social media databases complement with qualitative insights on the depth of those changes, capturing a wider range of perceptions including both locals and tourists. Here we explore: 
 
-- Twitter discourse  
+- Twitter discourse 
+- ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data.png)
+- ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data2.png)
+- ![Word Frequency](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Frequencyofwords.png)
 - TripAdvisor reviews  
 
