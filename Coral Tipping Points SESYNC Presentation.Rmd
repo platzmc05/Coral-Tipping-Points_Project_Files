@@ -45,6 +45,7 @@ For the ecological component, including the physical environment as well as stat
 - Reef fish density and diversity  
 
 ![Stony Coral Species Richness Declines in the Florida Reef Tract](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/Stony_Coral_Species_Richness.gif)
+![Regional Sea Surface Temperature and Degree Heating Weeks](*my url)
 
 ## Economic Data:
 
