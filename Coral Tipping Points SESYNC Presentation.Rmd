@@ -23,7 +23,7 @@ Urban coastal areas face powerful push-pull factors for investment into critical
 
 By linking discourse, socioeconomic, and biophysical datasets, this project explores connections between socio-ecological components of the Florida Reef Tract system to identify economic and social impacts surrounding the recent Stony Coral Tissue Loss Disease (SCTLD) event. Since 2014, SCTLD has been ravaging the Florida Reef Tract and spreading throughout the Western Atlantic. Since first appearing near the Port of Miami in 2014, the disease has spread the entire length of the Florida Reef Tract as well as throughout the Western Atlantic to the reefs of 17 countries and territories. SCTLD affects nearly half of the 45 reef building stony coral species and results in complete colony mortality just days to weeks following infection. Recent studies in the Florida Reef Tract approximate that average coral cover has fallen from a historical level of 25-40% to just 2% coral cover presently as a results of these disease and anthropogenic impacts. 
 
-(insert image of SCTLD infected coral??)
+![SCTLD Occurrence from Florida Keys National Marine Sanctuary, NOAA National Ocean Service](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/20200922-disease-progression.gif)
 
 ## Research Objective 
 
