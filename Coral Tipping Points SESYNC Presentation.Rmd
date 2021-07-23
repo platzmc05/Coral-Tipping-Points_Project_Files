@@ -67,8 +67,8 @@ In terms of the economic component, there are extensive datasets including count
 In regard to the social component, there are several databases available that offer quantitative and qualitative insights. For instance, while databases such as STR for hotel data or annual tourism reports can offer quantitative insights of the changes in tourism, the social media databases complement with qualitative insights on the depth of those changes, capturing a wider range of perceptions including both locals and tourists. Here we explore: 
 
 - Twitter discourse 
-- (https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data.png)
-- (https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data2.png)
-- (https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Frequencyofwords.png)
+- ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data.png)
+- ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data2.png)
+- ![Word Frequency](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Frequencyofwords.png)
 - TripAdvisor reviews  
 
