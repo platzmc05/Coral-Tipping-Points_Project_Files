@@ -75,6 +75,7 @@ In regard to the social component, there are several databases available that of
 ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data.png)
 ![Tweet counts](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Twitter_data2.png)
 ![Word Frequency](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/Frequencyofwords.jpeg)
+![WordCloud](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/WordCloud.png)
 
 -  Mentioning of relevant words such as "disease|ugly|bad|disappointed|disappointing" is only 1.8% of tweets, specifically 70 tweets in total. 
 
