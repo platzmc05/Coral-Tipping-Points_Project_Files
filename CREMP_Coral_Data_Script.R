@@ -122,7 +122,7 @@ ggplot(reef_location_Avg['Species.Richness_Avg'], aes(color=Species.Richness_Avg
   geom_sf()
 
 
-
+########################### Help With this section ######################################
 # create new spatial features for the average species richness by reef site for each year
 reef_location_avg <- reef_location %>%
   group_by(sitename,Sample.Year)%>%
