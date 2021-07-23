@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Collaborators:
 - Michelle Platz: University of South Florida 
-- Megan Kramer: University of South Florida
+- Megan Kramer: University of South Florida, megankramer@usf.edu
 - Christina Brown: University of Central Florida
 - Frida Bahja : University of Central Florida
 
@@ -46,7 +46,7 @@ For the ecological component, including the physical environment as well as stat
 
 ![Stony Coral Species Richness Declines in the Florida Reef Tract](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/Stony_Coral_Species_Richness.gif)
 
-Increasing sea temperatures are known to cause coral stress and make them more susceptible to threats such as disease. Degree heating weeks (DHW) are a measure of how much heat stress has accumulated in a region over a period of 3 months, and are a metric that is used to predict mass bleaching events. A plot of average monthly regional sea surface temperature (SST) and degree heating weeks shows that SST is rising over the period 2012 - 2020 and the frequency of DHW has increased.
+Increasing sea temperatures are known to cause coral stress and make them more susceptible to threats such as disease. Degree heating weeks (DHW) are a measure of how much heat stress has accumulated in a region over a period of 3 months, and are a metric that is used to predict mass bleaching events. A plot of average monthly regional sea surface temperature (SST) and degree heating weeks shows that SST is rising over the period 2012 - 2020 and the frequency of DHW has increased. This information provides important environmental context for the system.  
 
 ![Regional Sea Surface Temperature and Degree Heating Weeks](https://github.com/platzmc05/Coral-Tipping-Points_Project_Files/raw/master/figures/DHW.PNG)
 
