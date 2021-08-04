@@ -9,10 +9,17 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Collaborators:
+<<<<<<< HEAD
 - Michelle Platz: University of South Florida, mplatz@usf.edu
 - Megan Kramer: University of South Florida, megankramer@usf.edu
 - Christina Brown: University of Central Florida
 - Frida Bahja : University of Central Florida
+=======
+- Michelle Platz: University of South Florida, mplatz@usf.edu 
+- Megan Kramer: University of South Florida, megankramer@usf.edu, twitter: @meganrkramer
+- Christina Brown: University of Central Florida, christinaestelabrown@gmail.com
+- Frida Bahja : University of Central Florida, fridabahja@knights.ucf.edu
+>>>>>>> da84f4975355cd1f42777d9a6c533a439e2e13e7
 
 ## Introduction:
 
